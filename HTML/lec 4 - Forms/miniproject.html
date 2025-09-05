@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Lec 5</title>
+</head>
+<body>
+    <header>
+        <h1> University Registration Form </h1>
+        <p>Please fill out the form below to register. </p>
+        <hr/>
+    </header>
+
+    <main>
+        <form>
+            <h2> Personal Details </h2>
+            <label for="fname"> First Name : </label>
+            <input type="text" name = "fname" id = "fname" placeholder="eg. Arjun" required><br/><br />
+
+            <label for="lname"> Last Name : </label>
+            <input type="text" name = "lname" id = "lname" placeholder="eg. Kumar"><br/><br />
+
+            <label for="dob">Date of Birth : </label>
+            <input type="date" name="dob" id="dob"><br/><br />
+
+            <label>Gender</label><br/>
+            
+            <input type="radio" name = "gender" id="gender" value="male">
+            <label for="gender"> Male </label><br/>
+
+            <input type="radio" name = "gender" id="gender" value="female">
+            <label for="gender"> Female </label><br/>
+
+            <input type="radio" name = "gender" id="gender" value="other">
+            <label for="gender"> Other </label><br/><br/>
+
+            <label for="pic">Upload Your Photo : </label><br/>
+            <input type="file" id="pic" name="picture">
+
+            <br/><hr/><br/>
+
+            <h2>Contact Information</h2><br/>
+
+            <label for="email">Email Address : </label>
+            <input type="email" name="email" id="email" placeholder="you@example.com" required><br/><br/>
+
+            <label for="cellno">Phone Number : </label>
+            <input type="tel" name="phoneno" id="cellno" placeholder="eg. 6545995645"><br/><br/>
+
+            <label for="address">Mailing Address : </label>
+            <textarea name="address" id="address" placeholder="Street Address, City, State, ZIP Code"></textarea><br><br>
+
+            <br><hr><br>
+
+            <label for="course">Select Your Course </label>
+            <select name="course" id="course" placeholder="--Select a Course--" required>
+                <option value="CSE">CSE(Computer Science)</option>
+                <option value="ENTC">ENTC(Electronics and telecommunication)</option>
+                <option value="EE">EE(Electrical)</option>
+                <option value="ME">ME(Mechanical)</option>
+            </select><br><br>
+
+            <label> Extracurricular Interests </label><br>
+
+            <input type="checkbox" name="interests" id="sports" value="sports">
+            <label for="sports">Sports</label><br>
+
+            <input type="checkbox" name="interests" id="Music & Arts" value="Music & Arts">
+            <label for="Music & Arts">Music & Arts</label><br>
+
+            <input type="checkbox" name="interests" id="Technology clubs" value="Technology clubs">
+            <label for="Technology clubs">Technology clubs</label><br>
+
+            <input type="checkbox" name="interests" id="Volunteering" value="Volunteering">
+            <label for="Volunteering">Volunteering</label><br>
+
+            <br><hr><br>
+
+            <h2>Create Your Account </h2><br>
+
+            <label for="password">Create a Password </label>
+            <input type="password" name = "password" id="password" required><br><br>
+
+            <label for="security question">Security Question</label>
+            <select name="security question" id="security question">
+                <option value="pet name">What was your first pet's name ?</option>
+                <option value="securitykey">Enter your Security key</option>
+                <option value="teacher">Enter your 5th grade classteacher's name </option>
+            </select>
+            <br><br>
+
+            <label for="security-answer">Security Answer </label>
+            <input type="text" name="security-answer" id="security-answer"><br><br>
+
+            <input type="checkbox" name="agree-box" id="agree-box" value="agreed" required>
+            <label for="agree-box"> I agree to the Terms and Conditions </label>
+
+            <br><hr><br>
+
+            <button type="submit">Register</button>
+            <button type="reset">Clear form </button>
+        
+        </form> 
+    </main>
+</body>
+</html>
+
+
+<!-- Generated link -->
+<!-- 
+http://127.0.0.1:5500/HTML/lec%204%20-%20Forms/miniproject.html?fname=Arjun+&lname=kumar&dob=2005-10-12&gender=male&picture=&email=arjunkapoor23%40mail.com&phoneno=1234567890&address=street%2Ccity%2Cstate%2Czip&course=CSE&interests=sports&interests=Music+%26+Arts&interests=Technology+clubs&password=arjun123%3F&security+question=pet+name&security-answer=tommy&agree-box=agreed
+ -->
