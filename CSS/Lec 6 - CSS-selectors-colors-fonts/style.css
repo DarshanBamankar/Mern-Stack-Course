@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+h1{
+    color: #666666;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 0;
+}
+h2{
+    color: #0088cc;
+    text-align: justify;
+}
+ul{
+    color: #979797;
+    text-align: justify;
+}
