@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+.white{
+    height: 400px;
+    width: 800px;
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.red-circle{
+    z-index: 10;
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left : 300px;
+    top:25%;
+}
