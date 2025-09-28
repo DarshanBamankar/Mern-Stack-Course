@@ -1,0 +1,27 @@
+.container{
+    height: 500px;
+    width: 250px;
+    color: antiquewhite ;
+    background-color: black;
+    align-content: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+@media screen and (max-width:600px) {
+    .container{
+    height: 200px;
+    width: 100px;
+    background-color: pink;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .container{
+    height: 600px;
+    width: 400px;
+    background-color: blue;
+    color: red;
+    font-size: 50px;
+    }
+}

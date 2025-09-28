@@ -1,0 +1,26 @@
+.container{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px 20px yellow
+    /* (offset-x) (offset-y) (blur-radius) (spread-radius) */
+    /* inset makes the shadow go inwards */
+}
+
+.text{
+    color: whitesmoke;
+    font-size: 99px;
+    font-family: "sans-serif";
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+
+/* if the content overflows from the div */
+
+.info{
+    width: 95vw;
+    overflow: scroll;
+}
