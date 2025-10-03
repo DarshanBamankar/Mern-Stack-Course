@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+.container{
+    padding-left: 100px;
+    padding-top: 100px;
+}
+.box {
+  height: 100px;
+  width: 150px;
+  background-color: grey;
+  animation-name: color;
+  animation-duration: 5s;
+}
+
+@keyframes color {
+    from{
+        background-color: grey;
+    }
+    to{
+        background-color: red;
+    }
+}
