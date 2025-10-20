@@ -1,5 +1,7 @@
 /* Objects store information in key-value pairs. */
 
+const { name } = require("ejs");
+
 /* The keys are stored as strings */
 
 const accountHolder = {
@@ -58,3 +60,19 @@ console.log(accountHolder);
     for (let p in accountHolder){
         console.log(Object.entries(accountHolder));
     }
+
+// 
+    for(let keys in accountHolder){
+        console.log(keys, accountHolder[keys]);
+    }
+
+// Destructuring 
+
+    const destObject = {
+        userName : "Darshan",
+        userAge : 20,
+        userId  : "4587"
+     }
+
+     const {userName, userAge, userId} = destObject;
+     console.log(userName);
