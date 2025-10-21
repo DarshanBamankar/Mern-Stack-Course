@@ -1,6 +1,5 @@
 /* Objects store information in key-value pairs. */
 
-const { name } = require("ejs");
 
 /* The keys are stored as strings */
 
@@ -69,10 +68,80 @@ console.log(accountHolder);
 // Destructuring 
 
     const destObject = {
-        userName : "Darshan",
-        userAge : 20,
-        userId  : "4587"
+        Mname : "Darshan",
+        age : 20,
+        id  : "4587"
      }
 
-     const {userName, userAge, userId} = destObject;
-     console.log(userName);
+     const {Mname, age, id} = destObject;
+     console.log(Mname);
+
+// Accessing values and giving them different names
+
+    const destObjectTwo = {
+        name : "Rohit",
+        age : 20,
+        id : "5698"
+    }
+
+    const {name : userName, age : userAge, id : userID} = destObjectTwo;
+    console.log(userName, userAge, userID);
+
+
+// (Additional) -> Destructuring a array
+
+     let arr = [1,2,3,4];
+     const[one,two] = arr;
+
+     console.log(one,two); // 1 2
+
+// We can also write funtions inside a object
+
+    let funcObject = {
+        amount : "200000",
+        accountHolderName : "Darshan",
+        accountNumber : "147852369",
+        transactionDetails : function transactionDetails(amount, accountHolderName,accountNumber){
+            console.log(`Amount : ${amount} added into account no - ${accountNumber} with Holder Name - ${accountHolderName}`);
+        }
+    }
+
+    const {amount, accountHolderName, accountNumber, transactionDetails} = funcObject;
+    transactionDetails(amount, accountHolderName, accountNumber);
+
+// "This" keyword
+
+    const account = { 
+        accountName : "my-account",
+        createdAt : new Date().toLocaleDateString(),
+        accountFunction : function accountFunction(){
+            console.log(`${this.accountName} created on ${this.createdAt}`);
+        }
+    }
+    
+    account.accountFunction();
+
+    // "this" points to the parent object -> it is used in the function which is under a account object -> therefore it points / references to the account object
+    // allows code reusability
+
+// Nested objects 
+
+    const nestedObjects ={
+        acName : "acc1010",
+        acCreatedAt : new Date().toLocaleDateString(),
+        address : {
+            city : "Pune",
+            Muncipality : false,
+            pincode : "451268",
+        }
+    }
+
+    console.log(nestedObjects.address.city , nestedObjects.address.pincode);
+
+    const nestedObjectsTwo = {...nestedObjects}; // creates a individual copy of the objects
+    // but only at one level -> not on the nested objects -> they reference same memory location
+
+
+
+
+
