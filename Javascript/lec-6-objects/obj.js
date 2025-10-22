@@ -141,6 +141,17 @@ console.log(accountHolder);
     const nestedObjectsTwo = {...nestedObjects}; // creates a individual copy of the objects
     // but only at one level -> not on the nested objects -> they reference same memory location
 
+    // Spread Operator creates a shallow copy i.e only handles one level
+
+// To create a deep copy
+
+    const deepCopy = structuredClone(nestedObjects); // creates a complete independent copy 
+
+// Keys can be string || symbol
+
+    const sym = {
+        [sym] : "SYMBOL"
+    }
 
 
 
