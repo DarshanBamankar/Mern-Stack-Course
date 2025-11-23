@@ -94,13 +94,29 @@ sumOfNum(1,2,4,5,7);
 
 // Callback Function - Passing another function as an argument to one function
 
-    function placeOrder(rcpt){
-        console.log("Your Order has been placed")
-        rcpt();
-    }
+// Makes the functions reusable 
 
-    function generateReciept(){
-        console.log("This is your Reciept")
-    }
+    function generateReciept1(){
+        console.log("Here is your order reciept");
+    };
 
-    placeOrder(generateReciept);
+    function placeOrder1(c){
+    console.log("Your order has been placed, Thanks!!");
+    c();
+    };
+
+    placeOrder1(generateReciept1);
+
+
+// Example (More realistic)
+
+    function generateReciept(amt){
+        console.log(`Your order reciept for ${amt} has been generated`);
+    };
+
+    function placeOrder(amt,orderSummary,c){
+        console.log(`Your order for ${orderSummary} has been placed, Thank you!`);
+        c(amt);
+    };
+
+    placeOrder(600, "Paneer Masala",generateReciept);
