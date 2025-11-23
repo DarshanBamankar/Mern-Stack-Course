@@ -1,3 +1,7 @@
+/* 
+Author - Prime
+*/
+
 // Function Syntax
 
 /*
@@ -39,7 +43,7 @@ sumOfNum(1,2,4,5,7);
 // The function must be called after the initialization & declaration 
 
     const functionVar = function(num){
-        console.log(num);
+        return num;
     }
 
     functionVar(6);
@@ -54,3 +58,49 @@ sumOfNum(1,2,4,5,7);
     const onlyReturn = (num1 , num2) => num1 + num2;
     console.log(onlyReturn(4,5));
 
+// If there is only single parameter
+
+    const singleParam = num => num*num; // returns square of a number
+    console.log(singleParam(65));
+
+// Returning a object from a function
+
+    // Method One - 
+
+    const objReturn = () => {
+        return {
+            name : "Darshan",
+            age : 19
+        };
+    }
+
+    console.log(objReturn());
+
+    // Method Two 
+    
+    const objReturn2 = () => ({name : "Darshan", age : 19})
+    console.log(objReturn2());
+
+// IIFE - The function gets called immediately and automatically
+
+    (function callMeImmediately(){
+        console.log("DONE");   
+    })();
+
+    (()=> {
+        console.log("Welcome to the Site!!")
+    })();
+
+
+// Callback Function - Passing another function as an argument to one function
+
+    function placeOrder(rcpt){
+        console.log("Your Order has been placed")
+        rcpt();
+    }
+
+    function generateReciept(){
+        console.log("This is your Reciept")
+    }
+
+    placeOrder(generateReciept);
